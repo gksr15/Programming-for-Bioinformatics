@@ -1,1 +1,60 @@
 A basic shell script to go over directories, run virtual editors and navigate through a bash shell environment.
+
+Exercise 1
+1. 1. ls /usr/bin
+2. man ls
+3. ls -l /usr/bin
+4. cd /usr/bin
+ls -d a*
+5. . represents the current directory
+.. represents the previous directory
+6. ls *.py
+2. 1. vi file1.txt
+2. This is some text
+3. :wq
+3. 1. cp file1.txt file1_copy.txt
+2. rm file1.txt
+3. ls
+4. 1.cat file1_copy.txt
+2.cat file1_copy.txt > file1_contents.txt
+3.cat file1_contents.txt
+4.cat file.txt >> file1_contents.txt
+5.cat file1_contents.txt
+6.cat file1_copy.txt > file1_contents.txt
+cat file1_contents.txt
+5. 1.cd ~/class/ex1/
+2.head ex1.bed
+tail ex1.bed
+3.head -50 ex1.bed
+4.tail -25 ex1.bed
+5.more ex1.bed
+6.less ex1.bed
+6. 1.mkdir myDir
+2.rmdir myDir
+3.mkdir myDir
+4. cp file1_contents.txt myDir
+5.rmdir myDir
+6.rm myDir
+7.mkdir -p dir1/dir2
+7. 1.echo $PS1
+2.ls -a
+3.vi .bash_rc
+4.i
+export PS1="\[\033[38;5;10m\]\u\[$(tput sgr0)\]@\[$(tput
+sgr0)\]\[\033[38;5;13m\]\h\[$(tput sgr0)\]:\[$(tput
+sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
+:wq
+8. 1.cd ~/class/ex1
+2.wc -w ex1.bed
+3.wc -l ex1.bed
+9. 1.perl -e 'foreach(1..100){print $_."\n"; print STDERR ($_ / 2)."\n"}'
+2.perl -e 'foreach(1..100){print $_."\n"; print STDERR ($_ / 2)."\n"}' 1> myOut.txt
+3.perl -e 'foreach(1..100){print $_."\n"; print STDERR ($_ / 2)."\n"}' 2>myErr.txt
+4.perl -e 'foreach(1..100){print $_."\n"; print STDERR ($_ / 2)."\n"}' 1> myOut.txt 2>
+myErr.txt
+5.perl -e 'foreach(1..100){print $_."\n"; print STDERR ($_ / 2)."\n"}' 2&>1 mySeq.txt
+10 1.seq 0 .5 100 > longSeq.txt
+2.cat longSeq.txt | head -50 | tail -1
+3.cat longSeq.txt | tail +13
+4.cat longSeq.txt | tail -13
+5.head -50 longSeq.txt | tail +45 | wc -c
